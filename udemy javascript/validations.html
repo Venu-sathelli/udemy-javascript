@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 20vh auto 0 auto;
+            padding: 20px;
+            background-color: rgb(193, 220, 220);
+            border-radius: 15px;
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+
+        button {
+
+            background-color: rgb(30, 80, 123);
+            color: white;
+            font-size: 18px;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            margin: 20px 0;
+            height: 32px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+
+        }
+
+        h1 {
+            color: rgb(1, 31, 67);
+            text-align: center;
+
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        #inputcontrol {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+
+        }
+
+        #inputcontrol input {
+            border-radius: 3px;
+            height: 30px;
+            border: none;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="validation">
+        <form id="form" action="#">
+            <h1>Registation Form</h1>
+            <div id="inputcontrol">
+                <label for="">User Name :</label>
+                <input type="text" id="user" required>
+            </div>
+            <div id="inputcontrol">
+                <label for="">Email :</label>
+                <input type="email" id="user" required>
+            </div>
+            <div id="inputcontrol">
+                <label for="">Password</label>
+                <input type="password" id="user" required>
+            </div>
+            <div id="inputcontrol">
+                <button type="submit">log in</button>
+        </form>
+    </div>
+</body>
+
+</html>

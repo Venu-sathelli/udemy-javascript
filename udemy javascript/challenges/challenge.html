@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const masMarks = 78;
+        const heightMarks = 1.69;
+        const johnWeight = 92;
+        const johnHeight = 1.95;
+        const BMIMarks = masMarks / heightMarks ** 2;
+        const BMIHeight = johnWeight / (johnHeight * johnHeight);
+        console.log(BMIMarks, BMIHeight, BMIMarks > BMIHeight);
+
+
+        //task2
+        const marksWeight = 78;
+        const marksHeight = 1.88;
+        const john_weight = 85;
+        const john_height = 1.76;
+        const BMI_Mark = marksWeight / marksHeight ** 2;
+        const BMI_John = john_weight / (john_height * john_height);
+        console.log(BMI_Mark, BMI_John, BMIMarks > BMI_John);
+
+        // chellange 2 based on previous challenge
+
+        if (BMIMarks > BMIHeight) {
+            console.log(`BMIMarks ${BMIMarks} is greater than BMIHeight ${BMIHeight} !`);
+        }
+        else {
+            console.log(`BMIHeight ${BMIHeight} is less than BMIMarks ${BMIMarks}!`);
+        }
+        // task2
+
+        if (BMI_Mark > BMI_John) {
+            console.log("BMI_Mark is greater than BMI_John!");
+
+        }
+        else {
+            console.log("BMI_Mark is less than BMI_John !");
+        }
+        //challenge 3
+
+        /* const Dolphins = (96 + 108 + 89) / 3;
+         const Koalas = (88 + 91 + 110) / 3;
+         console.log(Dolphins, Koalas)
+ 
+         if (Dolphins > Koalas) {
+             console.log("dolphins is winner of the compition");
+         }
+         else {
+             console.log("Koalas is winner of the compition");
+         }
+         
+ */
+        const Dolphins = (98 + 128 + 99) / 3;
+        const Koalas = (88 + 98 + 125) / 3;
+        console.log(Dolphins, Koalas)
+        if (Dolphins > Koalas && Dolphins >= 100) {
+            console.log("Dolphs is winner of the compition 🏆");
+        }
+        else if (Koalas < Dolphins && Koalas >= 100) {
+            console.log("koalas is winner of the compition 🏆");
+        }
+        else if (Dolphins === Koalas && Dolphins >= 100 && Koalas >= 100) {
+            console.log("both are winner 🏆")
+        }
+        else {
+            console.log("no one wins th match")
+        }
+        //challenge 5
+        const bill = 275;
+        const tip = bill <= 300 && bill >= 50 ? bill * 0.15 :
+            bill * 0.2;
+        console.log(`The bill was ${bill}, the tip was ${tip}, and total value ${bill + tip}`);
+
+
+        // challenges on function
+        const calcAverage = (a, b, c) => {
+            return (a + b + c) / 3;
+        }
+        console.log(calcAverage(3, 4, 5));
+        const dolphins = calcAverage(44, 23, 71);
+        const koalas = calcAverage(65, 54, 49);
+        console.log(dolphins, koalas);
+
+        function checkwinner(avgdolhins, avgkoalas) {
+            if (avgdolhins >= 2 * avgkoalas) {
+                console.log(`dolphins win 🏆 (${avgdolhins} vs. ${avgkoalas})`);
+            }
+            else if (avgkoalas >= 2 * avgdolhins) {
+                console.log(`koalas win 🏆 (${avgkoalas} vs. ${avgdolhins})`);
+            }
+            else {
+                console.log('no teams wins...');
+            }
+            //const checkavgdolhins = calcAverage(dolphins);
+            //const checkavgkoalas = calcAverage(koalas);
+            // if (avgdolhins > avgkoalas) {
+            // console.log(`winner is avgdolhins the score is ${avgdolhins}`);
+            // }
+            // else {
+            //console.log(`winner is avgdolhins the score is ${koalas}`);
+            // }
+
+
+        }
+        console.log(checkwinner(dolphins, koalas));
+        console.log(checkwinner(180, 899));
+
+
+
+
+        // challenge
+        function calcTip(bill) {
+            const tip = bill <= 300 && bill >= 50 ? bill * 0.15 :
+                bill * 0.2;
+            return tip
+
+        }
+        console.log(calcTip(275));
+        const bills = [125, 555, 44];
+        const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]),];
+        //bonous
+
+        const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+        console.log(bills, tips, total);
+
+        const marks = {
+            fullName: 'Mark Miller',
+            mass: 87,
+            height: 4.8,
+            clabmi: function () {
+                this.bmi = this.mass / this.height ** 2;
+                return this.bmi
+            }
+
+        }
+        console.log(marks.clabmi());
+
+
+        const john = {
+            fullName: 'john smith',
+            mass: 93,
+            height: 5.5,
+            calbmi: function () {
+                this.bmi = this.mass / this.height ** 2;
+                return this.bmi
+            }
+
+        }
+        console.log(john.calbmi());
+        console.log(marks.bmi, john.bmi);
+        if (marks.bmi > john.bmi) {
+            console.log(`${marks.fullName}'s BMI ${marks.bmi} is higher than ${john.fullName}'s BMI ${john.bmi}`);
+        }
+        else if (john.bmi > marks.bmi) {
+            console.log(`${john.fullName}'s BMI ${john.bmi} is higher than ${marks.fullName}'s BMI ${marks.bmi}`);
+        }
+
+
+        function calcTip(bill) {
+            const tip = bill <= 300 && bill >= 50 ? bill * 0.15 :
+                bill * 0.2;
+            return tip;
+
+        }
+        const billss = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+        const tipss = [];
+        const totals = [];
+
+        for (let i = 0; i < billss.length; i++) {
+            const tipp = calcTip(billss[i]);
+            tipss.push(tipp);
+            totals.push(tipp + billss[i]);
+        }
+        console.log(billss, tipss, totals);
+
+        const calcAverages = function (arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+            }
+            return sum / arr.length;
+        }
+        console.log(calcAverages([2, 5, 53]));
+    </script>
+
+</body>
+
+</html>
